@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "EpiLicenseNoShow",
+  "description": "This extension hides the EpiServer license prompt",
+  "version": "1.0",  
+  "content_scripts": [{
+      "all_frames": true,
+      "js": [ 
+        "jquery.min.js",
+        "epilicense.js" 
+      ],
+      "matches": [
+      	"*://*.dragonspears.com/*",
+        "*://localhost:*/*"
+      ],
+      "run_at": "document_end"
+   }],
+  "permissions": [
+    "activeTab"
+  ]
+  
+}
